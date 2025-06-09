@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Juan Mercatante - Economist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      min-height: 100vh;
+      background-color: #f5f7fa;
+      color: #333;
+    }
+
+    .sidebar {
+      background-color: #003366;
+      color: white;
+      width: 260px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 15px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+    }
+
+    .sidebar img {
+      width: 215px;
+      border-radius: 50%;
+      border: 3px solid white;
+      margin-bottom: 20px;
+    }
+
+    .sidebar h1 {
+      font-size: 2.3rem;
+      font-weight: 800;
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    .sidebar nav {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .sidebar nav a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 10px 0;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .sidebar nav a:hover {
+      color: orange;
+    }
+
+    .main {
+      flex-grow: 1;
+      padding: 40px 50px;
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: #ffffff;
+    }
+
+    .main h2 {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      color: #003366;
+    }
+
+    .main p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .icon-row {
+      margin-top: 10px;
+    }
+
+    .icon-row a {
+      margin-right: 15px;
+      font-size: 1.6rem;
+      color: #003366;
+      transition: color 0.3s ease;
+    }
+
+    .icon-row a:hover {
+      color: #FF6B6B;
+    }
+
+    .email-row {
+      margin-top: 20px;
+      font-size: 1.05rem;
+      margin-bottom: 10px;
+    }
+
+    .email-row i {
+      font-size: 1.4rem;
+      color: #003366;
+      margin-right: 10px;
+    }
+
+    section {
+      margin-top: 50px;
+    }
+
+    section h3 {
+      font-size: 1.8rem;
+      border-bottom: 3px solid #0074d9;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      color: #003366;
+    }
+
+    .paper {
+      margin-bottom: 30px;
+    }
+
+    .paper h4 {
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+    }
+
+    .paper p {
+      margin: 2px 0;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    .paper-links {
+      margin-top: 4px;
+      font-size: 0.9rem;
+    }
+
+    .paper-links a {
+      color: #0074d9;
+      margin-right: 12px;
+      text-decoration: none;
+      transition: color 0.2s;
+      cursor: pointer;
+    }
+
+    .paper-links a:hover {
+      color: #FF6B6B;
+    }
+
+    .abstract-text {
+      display: none;
+      font-size: 0.9rem;
+      margin-top: 10px;
+      color: #333;
+      background-color: #f0f0f0;
+      padding: 10px;
+      border-left: 3px solid #0074d9;
+    }
+
+    .university {
+      margin-bottom: 30px;
+    }
+
+    .university h4 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: #003366;
+    }
+
+    .role {
+      font-weight: bold;
+      margin-top: 15px;
+      color: #0074d9;
+    }
+
+    ul.course-list {
+      list-style-type: disc;
+      margin-left: 20px;
+      font-size: 0.95rem;
+      margin-top: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      background-color: #f5f7fa;
+      margin-top: 40px;
+    }
+
+    @media screen and (max-width: 800px) {
+      body {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 20px;
+        position: relative;
+        height: auto;
+      }
+
+      .sidebar nav {
+        display: none;
+      }
+
+      .main {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <aside class="sidebar">
+    <img src="images_2.jpg" alt="Juan Mercatante"/>
+    <h1>Juan I. Mercatante</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#publications">Publications</a>
+      <a href="#working">Working Papers</a>
+      <a href="#teaching">Teaching</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <section id="about">
+      <h2>Welcome to my website!</h2>
+      <p>Hi! I'm Juan Mercatante, a PhD Candidate in Economics at the Paris School of Economics and the University of Buenos Aires. I am interested in topics at the intersection of Industrial Organization, Energy, and Infrastructure Development, with a focus on the energy transition in developing countries. I'm originally from Argentina, where I earned my BA in Economics from UADE and my MA from UTDT.</p>
+      <div class="email-row">
+        <i class="fas fa-envelope"></i> juan.ignacio-mercatante@psemail.eu
+      </div>
+      <div class="icon-row">
+        <a href="https://drive.google.com/file/d/1_qzweUgePA2C005uh9jPMcJxTyIRA6TQ/view?usp=sharing" title="CV" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-alt"></i></a>
+        <a href="https://www.linkedin.com/in/juan-ignacio-mercatante-559b21a7/" title="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </section>
+
+    <section id="publications">
+      <h3>Publications</h3>
+      <div class="paper">
+        <h4><strong>What are the Costs of Rigidity? A General Equilibrium Study of the Fuel Market in Argentina</strong></h4>
+        <p>Juan I. Mercatante</p>
+        <p><em>Energy Economics</em>, 2024</p>
+        <p class="paper-links">
+          <a onclick="toggleAbstract(this)">Abstract</a>
+          <a href="https://www.sciencedirect.com/science/article/abs/pii/S0140988324005826" target="_blank" rel="noopener noreferrer">Published version</a>
+        </p>
+        <div class="abstract-text">The policy that is most widely applied to the biofuel market in the world is the mandatory blend. This policy aims to induce the use of biofuels by setting a minimum level of biofuel per unit of blended fuel. This paper studies the costs and benefits of such a policy. To do so, a Recursive Computable General Equilibrium model (CGE), calibrated with a new own-developed energy-oriented Social Accounting Matrix of Argentina for 2018, has been developed. Such a model is extended by explicitly embedding a constrained fuel blending model into the CGE setup. This research addresses the following questions: What are the costs and benefits of a mandatory blend compared to a full flexibility scenario? Is it better to induce the use of biofuels through a tax on fossil fuels or a blending constraint? What is the impact of international price shocks when considering different blending regimes? This paper finds that the mandatory policy has a negative impact on the economic activity, poverty, income distribution, and energy affordability, but a positive one on emissions. When analysing the convenience of a special tax on fossil fuels instead of a mandatory regime, this paper finds that the cost and benefits of each policy are distributed differently over time. The special tax on fossil fuels performs better in the short run while the mandatory blend does so in the long run. Finally, this paper finds that flexibility in the fuel market improves the country's performance when there are shocks on international prices.</div>
+      </div>
+    </section>
+
+    <section id="working">
+      <h3>Working Papers</h3>
+
+      <div class="paper">
+        <h4><strong>Driving Change: Assessing the Impact of EV-promoting Policies in Argentina</strong></h4>
+        <p>Juan I. Mercatante</p>
+        <p class="paper-links">
+          <a onclick="toggleAbstract(this)">Abstract</a>
+        </p>
+        <div class="abstract-text">To assess the impact of policies promoting electric vehicles (EVs), I estimate a tractable dynamic model of the automobile market including both primary and secondary markets, a charging-service investment sector, and indirect network effects using data from Argentina. I evaluate three counterfactual regimes: (i) subsidies to new EVs and charging infrastructure, (ii) the welfare-maximizing EV subsidy under alternative externalities and tax settings, (iii) a ban on new internal combustion engine (ICE) vehicles sales. Under purchase subsidies, residential EV shares rise from 0.29% to 7.01% at a 30% subsidy. Network effects can cut penetration by up to 18.3 p.p. for a 30% subsidy. Emissions fall from 12.40 to 11.23 MTCO2eq while battery disposals jump from 0.97 to 15.68 thousand per year. Although this policy has a positive impact on social welfare, it is regressive in terms of income distribution, as it benefits high-income households more than low-income households, who typically purchase fewer new vehicles. Charging-infrastructure subsidies alone have negligible impact. The optimal EV subsidy is 28% (22% without environmental externalities, 20% without network effects, and 21% when car taxes or VAT are removed), yielding EV shares of 2.6–35.7% and average welfare gains up to 0.96 thousands USD per household. An ICE-sales ban requires EV prices to drop by 34 % to preserve welfare (42 % to maintain carless-household shares), fully electrifying the fleet, cutting emissions to 4.21–6.42 MTCO2eq, but surging battery waste to 112–197 thousand units.
+</div>
+      </div>
+
+      <div class="paper">
+        <h4><strong>Trading Electrons Across Time and Space</strong></h4>
+        <p>Joint work with David Andrés-Cerezo and Mar Reguant</p>
+        <p class="paper-links">
+          <a onclick="toggleAbstract(this)">Abstract</a>
+        </p>
+        <div class="abstract-text">Abstract is coming soon.</div>
+      </div>
+
+      <div class="paper">
+        <h4><strong>Wide Economic Impacts of Energy Storage: The Case of Argentina</strong></h4>
+        <p>Joint work with Exequiel Romero-Gómez</p>
+        <p class="paper-links">
+          <a onclick="toggleAbstract(this)">Abstract</a>
+        </p>
+        <div class="abstract-text">Renewable energy technologies offer a pathway to decarbonize power systems but face challenges due to their intermittent nature. Energy storage can mitigate this issue by shifting supply across time, thereby stabilizing markets and enhancing system efficiency. This paper studies the economic and environmental impacts of deploying energy storage in Argentina using a two-step approach: an optimal electricity dispatch model to estimate efficiency gains, and a general equilibrium model to evaluate macroeconomic, sectoral, and distributional effects. We estimate that a storage capacity of 10 GW (equivalent to 22% of Argentina’s installed power capacity) reduces average electricity costs by up to 3.6%. More conservative scenarios with 2–4 GW of storage still yield efficiency gains of 2%. In a low risk scenario, these gains translate into a GDP increases by 1.1 to 2.17 percentage points over a decade, while fiscal revenue rises, and welfare improves across all income groups, particularly among lower-income households. However, electrification effects associated with energy storage may moderate the increase in fiscal revenues and the decrease in unemployment. GHG emissions fall by 2.8–5.6 percentage points, though electrification partially offsets these gains due to the existing fossil-based electricity mix. Sectoral analysis reports that Construction, Machinery, and Non-Metallic Minerals benefit the most, while fossil fuel and primary sectors lose competitiveness. Risky environments preserves the qualitative results but presents lower magnitudes.</div>
+      </div>
+    </section>
+
+
+    <section id="teaching">
+      <h3>Teaching</h3>
+
+      <div class="university">
+        <h4>University of Buenos Aires</h4>
+        <div class="role">Professor</div>
+        <ul class="course-list">
+          <li>Microeconomics (2024-2025)</li>
+        </ul>
+        <div class="role">Teaching Assistant</div>
+        <ul class="course-list">
+          <li>International Trade (2023-2025)</li>
+          <li>Industrial Organization (2023-2025)</li>
+          <li>Microeconomic II (2018)</li>
+        </ul>
+      </div>
+
+      <div class="university">
+        <h4>Universidad Torcuato Di Tella</h4>
+	<div class="role">Professor</div>
+        <ul class="course-list">
+          <li>Microeconomics (2025)</li>
+	  <li>Economics I (2024)</li>
+          <li>Economics I (2019)</li>
+        </ul>
+
+        <div class="role">Teaching Assistant</div>
+        <ul class="course-list">
+          <li>Economics I, Economics II and Macroeconomics I (2017-2019 during my MA)</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function toggleAbstract(link) {
+      const abstractDiv = link.parentElement.nextElementSibling;
+      abstractDiv.style.display = abstractDiv.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</body>
+</html>
